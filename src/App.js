@@ -9,9 +9,9 @@ import Payments from './routes/payments';
 
 function App() {
   return (
-    <div>
+    <div class="flex flex-col content-between">
       <Header/>
-      <div class="h-screen bg-gray-200">
+      <div class="bg-gray-100 h-full">
         <Switch>
           <Route path="/payments">
             <Payments/>
@@ -21,7 +21,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
