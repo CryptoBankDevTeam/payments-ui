@@ -4,15 +4,18 @@ import Header from './components/header'
 import Footer from './components/footer'
 
 import { Switch, Route } from "react-router-dom";
-import Home from './routes/home';
-import Payments from './routes/payments';
+import { Home } from './routes/home';
+import { Payments, Payment } from './routes/payments';
 
 function App() {
   return (
     <div class="flex flex-col content-between">
       <Header/>
-      <div class="bg-gray-100 h-full">
+      <div class="bg-gray-100 h-screen">
         <Switch>
+          <Route path="/payments/:id">
+            <Payment/>
+          </Route>
           <Route path="/payments">
             <Payments/>
           </Route>
