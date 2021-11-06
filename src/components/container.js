@@ -10,7 +10,7 @@ function Container (props) {
 
     return (
         <div class="rounded-md bg-white m-4 p-4 shadow-md overflow-auto">
-            <ContainerTitle title={props.title}/>
+            {props.title !== undefined && <ContainerTitle title={props.title}/>}
             {props.children}
         </div>  
     );
